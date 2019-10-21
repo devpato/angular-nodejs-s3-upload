@@ -1,0 +1,8 @@
+<input (change)="onImagePicked($event)" placeholder="Upload Image" type="file" />
+<button (click)="onImageUpload()">Upload Image</button>
+
+<div *ngIf="imageUrl">
+  Preview Image from AWS
+  <br />
+  <img width="200px" src="https://s2-tutorial.s3.amazonaws.com/{{ imageUrl }}" />
+</div>
