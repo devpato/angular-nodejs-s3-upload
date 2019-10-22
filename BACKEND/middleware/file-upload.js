@@ -25,7 +25,7 @@ const upload = multer({
   storage: multerS3({
     acl: 'public-read',
     s3,
-    bucket: 's2-tutorial',
+    bucket: 'YOUR BUCKET NAME HERE',
     key: function(req, file, cb) {
       req.file = Date.now() + file.originalname;
       cb(null, Date.now() + file.originalname);
