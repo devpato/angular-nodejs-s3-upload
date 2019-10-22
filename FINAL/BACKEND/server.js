@@ -10,6 +10,7 @@ app.use(cors());
 app.post('/api/v1/upload', upload.array('image', 1), (req, res) => {
   res.send({ image: req.file });
 });
+
 app.listen(3000, () => {
   console.log('Server listening on port 3000!');
 });
