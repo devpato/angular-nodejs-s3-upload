@@ -34,9 +34,6 @@ const upload = multer({
   })
 });
 // var s3 = AWS.S3(awsCredentials);
-
-
-
 // s3.deleteObject({
 //   Bucket: MY_BUCKET,
 //   Key: req.file
