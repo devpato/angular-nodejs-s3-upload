@@ -7,7 +7,7 @@ dotenv.config();
 aws.config.update({
   secretAccessKey: process.env.SECRET_ACCESS_KEY,
   accessKeyId: process.env.ACCESS_KEY_ID,
-  region: 'YOUR AWS REGION' //E.g us-east-1
+  region: 'ap-south-1' //E.g us-east-1
 });
 
 const s3 = new aws.S3();
@@ -25,7 +25,7 @@ const upload = multer({
   storage: multerS3({
     acl: 'public-read',
     s3,
-    bucket: 'YOUR BUCKET NAME',
+    bucket: 'digitaluid',
     key: function(req, file, cb) {
       /*I'm using Date.now() to make sure my file has a unique name*/
       req.file = Date.now() + file.originalname;
@@ -33,5 +33,13 @@ const upload = multer({
     }
   })
 });
+// var s3 = AWS.S3(awsCredentials);
+
+
+
+// s3.deleteObject({
+//   Bucket: MY_BUCKET,
+//   Key: req.file
+// },function (err,data){})
 
 module.exports = upload;

@@ -1,6 +1,9 @@
-# angular-nodejs-s3-upload
-Repo for the tutorial I made on how to upload an image to S3 using nodejs and angular
+## client 
+cd ng-upload 
+npm i
+ng serve
 
-## Tutorial
-
-https://dev.to/devpato/angular-with-nodejs-image-upload-to-aws-s3-easy-pec
+## server 
+cd FINAL
+npm i
+nodemon server.js
