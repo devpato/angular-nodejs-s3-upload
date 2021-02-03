@@ -20,8 +20,11 @@ export class AppComponent {
   onImageUpload() {
     const imageForm = new FormData();
     imageForm.append('image', this.imageObj);
+    console.log(this.imageObj,'hello')
     this.imageUploadService.imageUpload(imageForm).subscribe(res => {
+      console.log(res)
       this.imageUrl = res['image'];
+      console.log(this.imageUrl)
     });
   }
 }

@@ -8,6 +8,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/api/v1/upload', upload.array('image', 1), (req, res) => {
+  console.log(res)
   res.send({ image: req.file });
 });
 
